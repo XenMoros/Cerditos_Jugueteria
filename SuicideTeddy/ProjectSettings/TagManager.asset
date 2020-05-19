@@ -12,6 +12,7 @@ TagManager:
   - Pelota
   - DestructionZone
   - Toy
+  - FallZone
   layers:
   - Default
   - TransparentFX
