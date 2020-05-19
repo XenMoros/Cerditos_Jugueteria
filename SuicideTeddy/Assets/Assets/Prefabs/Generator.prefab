@@ -48,7 +48,12 @@ MonoBehaviour:
   - {fileID: 3469668931540320703, guid: 0a7f2d0cdbbdf1444962aa0776ac76df, type: 3}
   - {fileID: 3493204135115068585, guid: 585839d43c6d1f64d9b0ff4330b623be, type: 3}
   instantiatedObjects: []
-  time: 2
+  pelotas:
+  - {fileID: 3816775663904309291, guid: dbb9ce1bbb433254dbcccf394b447c6f, type: 3}
+  instantiatedPelotas: []
+  timeEstantes: 0
+  timePelotas: 0
   generator: {fileID: 3631244202730000527}
   cosasMoviles: {fileID: 0}
   intEstanterias: 0
+  intPelotas: 0
