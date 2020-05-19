@@ -8,7 +8,7 @@ public class DestructionZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Estanteria"))
+        if (other.gameObject.CompareTag("Estanteria") || other.gameObject.CompareTag("Pelota"))
         {
             other.GetComponent<Scroll>().AutoDestruccion();
 
