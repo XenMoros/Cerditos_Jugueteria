@@ -6,7 +6,7 @@ TagManager:
   tags:
   - GameManager
   - Enemy
-  - DeadZone
+  - Estanteria
   layers:
   - Default
   - TransparentFX
