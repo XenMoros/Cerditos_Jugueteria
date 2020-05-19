@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3214066629415717165}
   - component: {fileID: 7875474210865083370}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376481379892368789}
   - component: {fileID: 1608390989470559578}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Up
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5645223441851823648}
   - component: {fileID: 1643210119841512020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Down
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7550180115614213456}
   - component: {fileID: 6367505119046714671}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7550180116864152661}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SuicideZone
   m_TagString: DeadZone
   m_Icon: {fileID: 0}
