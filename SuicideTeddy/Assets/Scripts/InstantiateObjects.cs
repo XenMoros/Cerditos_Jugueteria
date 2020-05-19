@@ -58,6 +58,9 @@ public class InstantiateObjects : MonoBehaviour
         {
             juguete.GetComponent<Scroll>().AutoDestruccion();
         }
+
+        timeEstantes = 2.0f;
+        timePelotas = 2.5f;
     }
 
     // Update is called once per frame
