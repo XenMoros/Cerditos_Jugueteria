@@ -68,9 +68,11 @@ public class GameManager : MonoBehaviour
 
         player = Instantiate(playerPrefab,startPoint).GetComponent<Scroll>();
         iObjects.Initialize();
+
         OpenPanel(panels.mainGroup, false);
         OpenPanel(panels.gameOverGroup, false);
         OpenPanel(panels.interfaceGroup, true);
+
         panels.mainGroupButton.Select();
         gameOverPanel = false;
         playing = true;
@@ -119,6 +121,8 @@ public class GameManager : MonoBehaviour
     {
         if (state) panel.alpha = 1;
         else panel.alpha = 0;
+
+        Debug.Log(panel.name + ": " + state.ToString());
 
         panel.interactable = state;
     }

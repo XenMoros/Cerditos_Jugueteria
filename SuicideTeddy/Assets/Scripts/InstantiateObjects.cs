@@ -36,14 +36,20 @@ public class InstantiateObjects : MonoBehaviour
     {
         foreach(GameObject juguete in instantiatedObjects)
         {
-            juguete.GetComponent<Scroll>().AutoDestruccion();
+            if(juguete != null)
+            {
+                juguete.GetComponent<Scroll>().AutoDestruccion();
+            }
         }
 
         instantiatedObjects.Clear();
 
         foreach (GameObject juguete in instantiatedPelotas)
         {
-            juguete.GetComponent<Scroll>().AutoDestruccion();
+            if (juguete != null)
+            {
+                juguete.GetComponent<Scroll>().AutoDestruccion();
+            }
         }
 
         instantiatedPelotas.Clear();
