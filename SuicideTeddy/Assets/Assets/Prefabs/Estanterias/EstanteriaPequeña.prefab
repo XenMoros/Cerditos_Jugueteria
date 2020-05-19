@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Juguetes:
-  - {fileID: 9071898278137712577, guid: 36887c507b9f91e47990ca22d24693ef, type: 3}
-  - {fileID: 7138498352144400930, guid: 6945de3202811e14980ebc8251619f7e, type: 3}
+  - {fileID: 7343846922779185017, guid: 205af7da0ab4f5840a776ec68c1d5b50, type: 3}
+  - {fileID: 7962927843993912377, guid: f5edba8cc7010a74fa1b9cf29495b1bb, type: 3}
   - {fileID: 218196964170912300, guid: a817798ed0322a4419b5ffbeddb1a789, type: 3}
   - {fileID: 8575267822396274000, guid: 1c82eeb734474a5418284696fc13805e, type: 3}
   Posiciones:

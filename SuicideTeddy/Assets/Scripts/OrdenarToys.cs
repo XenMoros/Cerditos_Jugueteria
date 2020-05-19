@@ -14,8 +14,6 @@ public class OrdenarToys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         for (int i=0; i < Posiciones.Count; i++)
         {
             jugueteRandom = Random.Range(0, Juguetes.Count);
