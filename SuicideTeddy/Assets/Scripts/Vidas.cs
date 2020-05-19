@@ -22,6 +22,7 @@ public class Vidas : MonoBehaviour
         currentLives = maxLives;
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         timerInvencible = tiempoInvencible + 1;
+        gameManager.ActualizarVidas(currentLives);
     }
 
     private void Update()
@@ -49,6 +50,8 @@ public class Vidas : MonoBehaviour
         Debug.Log(collision.tag);
         if (collision.CompareTag("DeadZone"))
         {
+            currentLives = 0;
+            gameManager.ActualizarVidas(currentLives);
             Kill();
         }
     }
@@ -58,6 +61,8 @@ public class Vidas : MonoBehaviour
         currentLives -= 1;
         timerInvencible = 0;
         invencible = true;
+
+        gameManager.ActualizarVidas(currentLives);
 
         if (currentLives <= 0)
         {

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,12 +15,13 @@ public class GameManager : MonoBehaviour
     public Transform startPoint;
 
     public CanvasPanels panels;
+    public InterfaceTexts texts;
 
     bool gameOverPanel = false;
     bool playing = false;
 
-    float score = 0;
-    float speed = 1;
+    float score = 0, scoreToMaxSpeed = 1000;
+    float minSpeed = 1.5f, maxSpeed=10;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class GameManager : MonoBehaviour
         OpenPanel(panels.mainGroup, true);
         OpenPanel(panels.interfaceGroup, false);
         OpenPanel(panels.gameOverGroup, false);
+        StaticComponent.SetCurrentSpeed(minSpeed);
     }
 
     // Update is called once per frame
@@ -38,10 +42,7 @@ public class GameManager : MonoBehaviour
             EndGame();
             StartGame();
         }
-       /* if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Escape();
-        }*/
+
 
         if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
@@ -51,7 +52,9 @@ public class GameManager : MonoBehaviour
 
         if (playing)
         {
-            score += Time.deltaTime;
+            StaticComponent.SetCurrentSpeed(Mathf.SmoothStep(minSpeed, maxSpeed, score / scoreToMaxSpeed));
+            score += 10 * Time.deltaTime;
+            texts.scoreText.text = ((int) Math.Floor(score)).ToString("G");
         }
 
     }
@@ -62,8 +65,9 @@ public class GameManager : MonoBehaviour
         {
             player.AutoDestruccion();
         }
+
         player = Instantiate(playerPrefab,startPoint).GetComponent<Scroll>();
-        //iObjects.Initialize();
+        iObjects.Initialize();
         OpenPanel(panels.mainGroup, false);
         OpenPanel(panels.gameOverGroup, false);
         OpenPanel(panels.interfaceGroup, true);
@@ -71,6 +75,8 @@ public class GameManager : MonoBehaviour
         gameOverPanel = false;
         playing = true;
         score = 0;
+
+        StaticComponent.SetCurrentSpeed(minSpeed);
 
     }
 
@@ -81,7 +87,6 @@ public class GameManager : MonoBehaviour
             player.AutoDestruccion();
         }
 
-        OpenPanel(panels.interfaceGroup, false);
         OpenPanel(panels.mainGroup, false);
         OpenPanel(panels.gameOverGroup, true);
         panels.gameOverGroupButton.Select();
@@ -117,6 +122,11 @@ public class GameManager : MonoBehaviour
 
         panel.interactable = state;
     }
+
+    public void ActualizarVidas(int vidas)
+    {
+        texts.livesText.text = vidas.ToString();
+    }
 }
 
 [System.Serializable]
@@ -127,4 +137,11 @@ public class CanvasPanels
     public CanvasGroup gameOverGroup;
     public Button mainGroupButton;
     public Button gameOverGroupButton;
+}
+
+[System.Serializable]
+public class InterfaceTexts
+{
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
 }
