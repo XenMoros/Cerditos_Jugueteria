@@ -9,7 +9,7 @@ public class Scroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-1 * speed * Time.deltaTime, 0, 0);
+        transform.Translate(-1 * speed * Time.deltaTime, 0, 0, Space.World);
     }
 
     public void AutoDestruccion()
