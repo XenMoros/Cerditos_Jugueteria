@@ -10,24 +10,36 @@ public class Vidas : MonoBehaviour
     int currentLives;
     bool invencible;
 
+    [Range(0f,10f)] public float tiempoInvencible;
+    float timerInvencible;
+
     GameManager gameManager;
 
-    private void Reset()
-    {
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-    }
 
     // Start is called before the first frame update
     void Start()
     {
         currentLives = maxLives;
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        timerInvencible = tiempoInvencible + 1;
     }
 
+    private void Update()
+    {
+        if(invencible)
+        {
+            timerInvencible += Time.deltaTime;
+            if(timerInvencible >= tiempoInvencible)
+            {
+                invencible = false;
+            }
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Enemy"))
         {
-            PerderVidas();
+            if (!invencible) PerderVidas();
         }
     }
 
@@ -42,11 +54,14 @@ public class Vidas : MonoBehaviour
     private void PerderVidas()
     {
         currentLives -= 1;
+        timerInvencible = 0;
+        invencible = true;
 
-        if(currentLives <= 0)
+        if (currentLives <= 0)
         {
             Kill();
         }
+
     }
 
     private void Kill()
