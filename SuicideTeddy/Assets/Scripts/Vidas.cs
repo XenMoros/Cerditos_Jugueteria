@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class Vidas : MonoBehaviour
 {
-    int maxLives;
+    int maxLives = 3;
     int currentLives;
     bool invencible;
 

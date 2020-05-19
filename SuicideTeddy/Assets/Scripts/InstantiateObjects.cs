@@ -15,7 +15,7 @@ public class InstantiateObjects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(GameObject objeto in GameObject.FindGameObjectsWithTag("Estanterias"))
+        foreach(GameObject objeto in GameObject.FindGameObjectsWithTag("Estanteria"))
         {
             instantiatedObjects.Add(objeto);
         }
