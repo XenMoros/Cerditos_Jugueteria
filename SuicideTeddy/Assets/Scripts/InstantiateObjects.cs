@@ -47,7 +47,7 @@ public class InstantiateObjects : MonoBehaviour
 
         if (instantiatedPelotas.Count <= 0 && timePelotas <=0)
         {
-            instantiatedPelotas.Add(Instantiate(pelotas[intPelotas], generator.position, Quaternion.identity, cosasMoviles));
+            instantiatedPelotas.Add(Instantiate(pelotas[intPelotas], spawns.spawnPelota.transform.position, spawns.spawnPelota.transform.rotation, cosasMoviles));
 
             timePelotas = Random.Range(5, 10);
         }
