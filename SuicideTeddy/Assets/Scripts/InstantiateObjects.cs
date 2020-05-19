@@ -15,7 +15,7 @@ public class InstantiateObjects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach(GameObject objeto in GameObject.FindGameObjectsWithTag("Estanterias"))
+        foreach(GameObject objeto in GameObject.FindGameObjectsWithTag("Estanteria"))
         {
             instantiatedObjects.Add(objeto);
         }
@@ -26,7 +26,7 @@ public class InstantiateObjects : MonoBehaviour
     {
         time -= Time.deltaTime;
 
-        if (instantiatedObjects.Count <= 4 && time <= 0)
+        if (instantiatedObjects.Count <= 5 && time <= 0)
         {
             intEstanterias = Random.Range(0, 2);
 
@@ -34,6 +34,13 @@ public class InstantiateObjects : MonoBehaviour
 
             time = Random.Range(3,5);
         }
+
+        instantiatedObjects.TrimExcess();
+    }
+
+    public void ReordenarLista()
+    {
+        instantiatedObjects.RemoveAll(estante => estante == null);
     }
 
     

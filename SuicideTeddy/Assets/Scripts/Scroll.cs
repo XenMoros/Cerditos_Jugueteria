@@ -16,4 +16,9 @@ public class Scroll : MonoBehaviour
     {
         transform.Translate(-1 * speed * Time.deltaTime, 0, 0);
     }
+
+    public void AutoDestruccion()
+    {
+        Destroy(gameObject);
+    }
 }
