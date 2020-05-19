@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
-    public float speed = 1.5f; 
+    //public float speed = 1.5f; 
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(-1 * speed * Time.deltaTime, 0, 0, Space.World);
+        transform.Translate(-1 * StaticComponent.GetCurrentSpeed() * Time.deltaTime, 0, 0, Space.World);
     }
 
     public void AutoDestruccion()

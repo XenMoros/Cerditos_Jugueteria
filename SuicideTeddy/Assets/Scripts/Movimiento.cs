@@ -12,7 +12,7 @@ public class Movimiento : MonoBehaviour
     [Range(0f,100f)] public float velocidadHorizontal = 8f;
     [Range(0f, 100f)] public float velocidadSalto = 10f;
 
-    [Range(0f, 100f)] public float impulsoHorizontal = 50f;
+    [Range(0f, 100f)] public float impulsoHorizontal = 33f;
 
     bool onAir;
 
@@ -47,14 +47,14 @@ public class Movimiento : MonoBehaviour
         {
             if (personageRB.velocity.x < velocidadHorizontal)
             {
-                personageRB.AddForce(new Vector2(impulsoActual, 0), ForceMode.Force);
+                personageRB.AddForce(new Vector2(impulsoActual * StaticComponent.GetCurrentSpeed(), 0), ForceMode.Force);
             }
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (personageRB.velocity.x > -velocidadHorizontal)
             {
-                personageRB.AddForce(new Vector2(-impulsoActual, 0), ForceMode.Force);
+                personageRB.AddForce(new Vector2(-impulsoActual * StaticComponent.GetCurrentSpeed(), 0), ForceMode.Force);
             }
         }
         else
