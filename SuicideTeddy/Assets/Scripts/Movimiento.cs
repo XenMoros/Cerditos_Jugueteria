@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -10,42 +12,55 @@ public class Movimiento : MonoBehaviour
     [Range(0f,10f)] public float velocidadHorizontal = 5f;
     [Range(0f, 10f)] public float velocidadSalto = 5f;
 
+    [Range(0f, 100f)] public float impulsoHorizontal = 10f;
+
+    bool onAir;
+
     // Assign components on reset of the class
     void Reset()
     {
         personageRB = transform.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //Debug.Log(personageRB.velocity);
+        if(Math.Abs(personageRB.velocity.y) >= 0.1f)
+        {
+            onAir = true;
+        }
+        else
+        {
+            onAir = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && !onAir)
+        {
+                personageRB.AddRelativeForce(new Vector2(0, velocidadSalto), ForceMode2D.Impulse);
+                personageRB.velocity = new Vector2(personageRB.velocity.x/2,personageRB.velocity.y);
+        }
+
+        float impulsoActual = impulsoHorizontal;
+
+        if (onAir) impulsoActual /= 10;
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            if(personageRB.velocity.x < velocidadHorizontal)
+            if (personageRB.velocity.x < velocidadHorizontal)
             {
-                personageRB.AddForce(new Vector2(10, 0),ForceMode2D.Force);
+                personageRB.AddRelativeForce(new Vector2(impulsoActual, 0), ForceMode2D.Force);
             }
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (personageRB.velocity.x > -velocidadHorizontal)
             {
-                personageRB.AddForce(new Vector2(-10, 0), ForceMode2D.Force);
+                personageRB.AddRelativeForce(new Vector2(-impulsoActual, 0), ForceMode2D.Force);
             }
         }
         else
         {
-            personageRB.AddForce(new Vector2(-2*personageRB.velocity.x,0), ForceMode2D.Force);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (personageRB.velocity.y == 0)
-            {
-                personageRB.AddForce(new Vector2(0, velocidadSalto),ForceMode2D.Impulse);
-            }
+            personageRB.AddForce(new Vector2(-2 * personageRB.velocity.x, 0), ForceMode2D.Force);
         }
     }
+
 }
