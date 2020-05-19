@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InstantiateObjects : MonoBehaviour
 {
     public List<GameObject> estanterias = new List<GameObject>();
     public List<GameObject> instantiatedObjects = new List<GameObject>();
+    
+    public SpawnPoints spawns;
 
     public float time = 0;
     public Transform generator;
@@ -30,7 +33,7 @@ public class InstantiateObjects : MonoBehaviour
         {
             intEstanterias = Random.Range(0, 2);
 
-            instantiatedObjects.Add(Instantiate(estanterias[intEstanterias], generator.position, Quaternion.identity, cosasMoviles));
+            instantiatedObjects.Add(Instantiate(estanterias[intEstanterias], spawns.spawnEstanteria.transform.position, spawns.spawnEstanteria.transform.rotation, cosasMoviles));
 
             time = Random.Range(3,5);
         }
@@ -44,4 +47,12 @@ public class InstantiateObjects : MonoBehaviour
     }
 
     
+}
+
+[System.Serializable]
+public class SpawnPoints
+{
+    public Transform spawnEstanteria;
+    public Transform spawnPelota;
+
 }
