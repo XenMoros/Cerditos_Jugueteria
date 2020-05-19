@@ -22,11 +22,11 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Pelota
+  - Enemy
   - DeadZone
   - DestructionZone
-  - 
-  - 
+  - Player
+  - Obstaculos
   - 
   - 
   - 
