@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9071898278138205153}
   - component: {fileID: 9071898278136878017}
   - component: {fileID: 9071898278135779585}
+  - component: {fileID: 6536504267782914001}
   m_Layer: 0
   m_Name: Conejo
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9071898278137712577}
   m_LocalRotation: {x: -0.22511233, y: 0, z: -0, w: 0.9743328}
-  m_LocalPosition: {x: 1.8655157, y: -0.8771696, z: -1.0001206}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.295982, y: 0.295982, z: 0.295982}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,3 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6536504267782914001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9071898278137712577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4dade7de93a5c41ac5bdba9efae22f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
