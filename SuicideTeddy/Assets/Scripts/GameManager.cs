@@ -38,10 +38,10 @@ public class GameManager : MonoBehaviour
             EndGame();
             StartGame();
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+       /* if (Input.GetKeyDown(KeyCode.Escape))
         {
             Escape();
-        }
+        }*/
 
         if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {

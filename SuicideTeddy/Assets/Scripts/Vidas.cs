@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(CapsuleCollider2D))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class Vidas : MonoBehaviour
 {
     int maxLives = 3;
-    int currentLives;
-    bool invencible;
+    public int currentLives;
+    public bool invencible;
 
-    [Range(0f,10f)] public float tiempoInvencible;
+    [Range(0f,10f)] public float tiempoInvencible = 3;
     float timerInvencible;
 
     GameManager gameManager;
@@ -35,16 +35,18 @@ public class Vidas : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.collider.tag);
         if (collision.collider.CompareTag("Enemy"))
         {
             if (!invencible) PerderVidas();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log(collision.tag);
         if (collision.CompareTag("DeadZone"))
         {
             Kill();

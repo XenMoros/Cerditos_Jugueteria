@@ -4,22 +4,22 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(CapsuleCollider2D))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
 public class Movimiento : MonoBehaviour
 {
-    public Rigidbody2D personageRB;
-    [Range(0f,100f)] public float velocidadHorizontal = 5f;
-    [Range(0f, 100f)] public float velocidadSalto = 5f;
+    public Rigidbody personageRB;
+    [Range(0f,100f)] public float velocidadHorizontal = 8f;
+    [Range(0f, 100f)] public float velocidadSalto = 10f;
 
-    [Range(0f, 100f)] public float impulsoHorizontal = 10f;
+    [Range(0f, 100f)] public float impulsoHorizontal = 50f;
 
     bool onAir;
 
     // Assign components on reset of the class
     void Reset()
     {
-        personageRB = transform.GetComponent<Rigidbody2D>();
+        personageRB = transform.GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -35,7 +35,7 @@ public class Movimiento : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !onAir)
         {
-                personageRB.AddRelativeForce(new Vector2(0, velocidadSalto), ForceMode2D.Impulse);
+                personageRB.AddForce(new Vector2(0, velocidadSalto), ForceMode.Impulse);
                 personageRB.velocity = new Vector2(personageRB.velocity.x/2,personageRB.velocity.y);
         }
 
@@ -47,19 +47,19 @@ public class Movimiento : MonoBehaviour
         {
             if (personageRB.velocity.x < velocidadHorizontal)
             {
-                personageRB.AddRelativeForce(new Vector2(impulsoActual, 0), ForceMode2D.Force);
+                personageRB.AddForce(new Vector2(impulsoActual, 0), ForceMode.Force);
             }
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (personageRB.velocity.x > -velocidadHorizontal)
             {
-                personageRB.AddRelativeForce(new Vector2(-impulsoActual, 0), ForceMode2D.Force);
+                personageRB.AddForce(new Vector2(-impulsoActual, 0), ForceMode.Force);
             }
         }
         else
         {
-            personageRB.AddForce(new Vector2(-2 * personageRB.velocity.x, 0), ForceMode2D.Force);
+            personageRB.AddForce(new Vector2(-2 * personageRB.velocity.x, 0), ForceMode.Force);
         }
     }
 
