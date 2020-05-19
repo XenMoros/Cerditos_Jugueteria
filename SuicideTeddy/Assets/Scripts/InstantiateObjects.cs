@@ -48,6 +48,10 @@ public class InstantiateObjects : MonoBehaviour
 
         instantiatedPelotas.Clear();
 
+        foreach (GameObject juguete in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            juguete.GetComponent<Scroll>().AutoDestruccion();
+        }
     }
 
     // Update is called once per frame
@@ -63,6 +67,7 @@ public class InstantiateObjects : MonoBehaviour
             instantiatedObjects.Add(Instantiate(estanterias[intEstanterias], spawns.spawnEstanteria.transform.position, spawns.spawnEstanteria.transform.rotation, cosasMoviles));
 
             timeEstantes = Random.Range(initialRandomEstantes/StaticComponent.GetCurrentSpeed(), endRandomEstantes / StaticComponent.GetCurrentSpeed());
+
         }
 
         if (instantiatedPelotas.Count <= 0 && timePelotas <=0)
