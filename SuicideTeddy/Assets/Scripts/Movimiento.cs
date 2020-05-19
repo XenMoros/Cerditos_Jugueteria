@@ -9,8 +9,8 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour
 {
     public Rigidbody2D personageRB;
-    [Range(0f,10f)] public float velocidadHorizontal = 5f;
-    [Range(0f, 10f)] public float velocidadSalto = 5f;
+    [Range(0f,100f)] public float velocidadHorizontal = 5f;
+    [Range(0f, 100f)] public float velocidadSalto = 5f;
 
     [Range(0f, 100f)] public float impulsoHorizontal = 10f;
 
