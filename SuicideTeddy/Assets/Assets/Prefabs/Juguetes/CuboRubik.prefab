@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7962927843994818617}
   - component: {fileID: 7962927843995917049}
   - component: {fileID: 2368118776525237793}
-  - component: {fileID: 1768086617085213739}
   - component: {fileID: 1362161085695436042}
+  - component: {fileID: 6394033228888079630}
   m_Layer: 0
   m_Name: CuboRubik
   m_TagString: Enemy
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7962927843993912377}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.30386, y: 0.30386, z: 0.30386}
+  m_LocalScale: {x: 0.5369513, y: 0.5369513, z: 0.5369513}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,20 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4dade7de93a5c41ac5bdba9efae22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
---- !u!65 &1768086617085213739
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7962927843993912377}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.4999998, y: 2.5000002, z: 2.5000002}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1362161085695436042
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,3 +108,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!65 &6394033228888079630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7962927843993912377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9842521, y: 0.98425233, z: 0.9842523}
+  m_Center: {x: 0, y: 0, z: 0.4949707}

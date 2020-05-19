@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3631244202730000526}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44,16 +44,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   estanterias:
-  - {fileID: 4562790992395553499, guid: b2d75c89a51b1ef418fe212656f8e97b, type: 3}
-  - {fileID: 3469668931540320703, guid: 0a7f2d0cdbbdf1444962aa0776ac76df, type: 3}
-  - {fileID: 3493204135115068585, guid: 585839d43c6d1f64d9b0ff4330b623be, type: 3}
+  - {fileID: 5144648946636093662, guid: c257cade9ad90e2489570856f5365dc4, type: 3}
+  - {fileID: 5144648946636093662, guid: effec1307ec19c24da2799392dc740d7, type: 3}
+  - {fileID: 5144648946636093662, guid: 0bd73d53036ea434b9753b4cce91aaff, type: 3}
   instantiatedObjects: []
   pelotas:
   - {fileID: 3816775663904309291, guid: dbb9ce1bbb433254dbcccf394b447c6f, type: 3}
   instantiatedPelotas: []
+  spawns:
+    spawnEstanteria: {fileID: 0}
+    spawnPelota: {fileID: 0}
   timeEstantes: 0
   timePelotas: 0
   generator: {fileID: 3631244202730000527}
   cosasMoviles: {fileID: 0}
   intEstanterias: 0
   intPelotas: 0
+  initialRandomEstantes: 4.5
+  endRandomEstantes: 7.5
+  initialRandomPelotas: 7.5
+  endRandomPelotas: 12.5

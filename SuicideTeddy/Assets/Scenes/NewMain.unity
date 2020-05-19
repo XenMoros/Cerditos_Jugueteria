@@ -578,5 +578,45 @@ PrefabInstance:
       propertyPath: spawns.spawnPelota
       value: 
       objectReference: {fileID: 362119674}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.96
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18793e940f2a25d4ba3615906526626d, type: 3}

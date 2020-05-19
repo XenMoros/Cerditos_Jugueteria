@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 218196964167781932}
   - component: {fileID: 218196964168912108}
   - component: {fileID: 4053631369048243418}
-  - component: {fileID: 1589066272668553642}
   - component: {fileID: 54931410571361380}
+  - component: {fileID: 7507237129997559432}
   m_Layer: 0
   m_Name: TrenMadera
   m_TagString: Enemy
@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218196964170912300}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.3433861, y: -0.61813104, z: -0.61813104, w: 0.3433861}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.9329385, y: 1.9329385, z: 1.9329385}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90.00001, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.99999, y: -180, z: 58.105995}
 --- !u!33 &218196964167781932
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -92,21 +92,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4dade7de93a5c41ac5bdba9efae22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
---- !u!136 &1589066272668553642
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218196964170912300}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.41
-  m_Height: 2.53
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &54931410571361380
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,3 +108,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!136 &7507237129997559432
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218196964170912300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.13072366
+  m_Height: 1.0013775
+  m_Direction: 0
+  m_Center: {x: 0.007900749, y: 4.1622447e-10, z: 0.11598773}
