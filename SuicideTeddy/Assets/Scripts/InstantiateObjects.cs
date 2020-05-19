@@ -21,6 +21,8 @@ public class InstantiateObjects : MonoBehaviour
     public int intEstanterias;
     public int intPelotas = 0;
 
+    public float initialRandomEstantes = 4.5f, endRandomEstantes = 7.5f;
+    public float initialRandomPelotas = 7.5f, endRandomPelotas = 12.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,24 @@ public class InstantiateObjects : MonoBehaviour
         {
             instantiatedObjects.Add(objeto);
         }
+    }
+
+    public void Initialize()
+    {
+        foreach(GameObject juguete in instantiatedObjects)
+        {
+            juguete.GetComponent<Scroll>().AutoDestruccion();
+        }
+
+        instantiatedObjects.Clear();
+
+        foreach (GameObject juguete in instantiatedPelotas)
+        {
+            juguete.GetComponent<Scroll>().AutoDestruccion();
+        }
+
+        instantiatedPelotas.Clear();
+
     }
 
     // Update is called once per frame
@@ -42,14 +62,14 @@ public class InstantiateObjects : MonoBehaviour
 
             instantiatedObjects.Add(Instantiate(estanterias[intEstanterias], spawns.spawnEstanteria.transform.position, spawns.spawnEstanteria.transform.rotation, cosasMoviles));
 
-            timeEstantes = Random.Range(3,5);
+            timeEstantes = Random.Range(initialRandomEstantes/StaticComponent.GetCurrentSpeed(), endRandomEstantes / StaticComponent.GetCurrentSpeed());
         }
 
         if (instantiatedPelotas.Count <= 0 && timePelotas <=0)
         {
             instantiatedPelotas.Add(Instantiate(pelotas[intPelotas], spawns.spawnPelota.transform.position, spawns.spawnPelota.transform.rotation, cosasMoviles));
 
-            timePelotas = Random.Range(5, 10);
+            timePelotas = Random.Range(initialRandomPelotas / StaticComponent.GetCurrentSpeed(), endRandomPelotas / StaticComponent.GetCurrentSpeed());
         }
 
         instantiatedObjects.TrimExcess();

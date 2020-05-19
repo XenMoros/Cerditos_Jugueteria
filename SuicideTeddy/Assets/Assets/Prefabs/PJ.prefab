@@ -140,6 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0244c1dd552c79940b56330fc7a26fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLives: 0
+  invencible: 0
   tiempoInvencible: 3
 --- !u!114 &114629669693567520
 MonoBehaviour:
@@ -153,4 +155,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4dade7de93a5c41ac5bdba9efae22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
