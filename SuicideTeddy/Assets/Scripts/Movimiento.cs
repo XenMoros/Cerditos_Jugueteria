@@ -19,7 +19,7 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(personageRB.velocity);
+        //Debug.Log(personageRB.velocity);
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
