@@ -488,6 +488,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Escenario
       objectReference: {fileID: 0}
+    - target: {fileID: 7821724749176886569, guid: 18793e940f2a25d4ba3615906526626d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8491184620956972466, guid: 18793e940f2a25d4ba3615906526626d,
         type: 3}
       propertyPath: spawns.spawnEstanteria
