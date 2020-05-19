@@ -12,6 +12,7 @@ TagManager:
   - Pelota
   - DestructionZone
   - Toy
+  - FallZone
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - DestructionZone
   - Player
   - Obstaculos
-  - 
+  - Estanteria
   - 
   - 
   - 

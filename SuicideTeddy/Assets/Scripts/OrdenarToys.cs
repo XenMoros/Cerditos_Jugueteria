@@ -18,8 +18,12 @@ public class OrdenarToys : MonoBehaviour
     {
         for (int i = 0; i < Posiciones.Count; i++)
         {
-            jugueteRandom = Random.Range(0, Juguetes.Count);
-            Instantiate(Juguetes[jugueteRandom], Posiciones[i].position, Juguetes[jugueteRandom].transform.rotation, transform.parent);
+            if(Random.Range(0f,1f) < 0.5f)
+            {
+                jugueteRandom = Random.Range(0, Juguetes.Count);
+                Instantiate(Juguetes[jugueteRandom], Posiciones[i].position, Juguetes[jugueteRandom].transform.rotation, transform.parent);
+
+            }
         }
     }
 }
