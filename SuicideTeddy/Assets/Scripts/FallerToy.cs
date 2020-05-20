@@ -26,6 +26,7 @@ public class FallerToy : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y, -5);
                 objectRB.AddForce(10 * Vector3.down, ForceMode.Impulse);
+                objectRB.AddTorque(Random.Range(80f,160f) * Vector3.left + Random.Range(-1f,1f)*50f*Vector3.forward);
                 objectRB.useGravity = true;
                 
             }
