@@ -10,6 +10,7 @@ public class Movimiento : MonoBehaviour
 {
     public Rigidbody personageRB;
     public AnimatorController aController;
+    public PlayerAudio playerAudio;
 
     [Range(0f,100f)] public float velocidadHorizontal = 8f;
     [Range(0f, 100f)] public float velocidadSalto = 10f;
@@ -43,7 +44,7 @@ public class Movimiento : MonoBehaviour
             {
                 personageRB.AddForce(new Vector2(0, velocidadSalto), ForceMode.Impulse);
                 personageRB.velocity = new Vector2(personageRB.velocity.x / 2, personageRB.velocity.y);
-
+                playerAudio.PlayAudio(0);
                 aController.ActivateJump();
             }
 

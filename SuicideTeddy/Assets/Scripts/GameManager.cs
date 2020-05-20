@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public CanvasPanels panels;
     public InterfaceTexts texts;
 
+    public PlayerAudio gameAudio;
+
     bool gameOverPanel = false;
     bool playing = false;
 
@@ -79,6 +81,9 @@ public class GameManager : MonoBehaviour
         score = 0;
 
         StaticComponent.SetCurrentSpeed(minSpeed);
+        gameAudio.audioSource.Stop();
+        gameAudio.audioSource.clip = gameAudio.sounds[1];
+        gameAudio.audioSource.Play();
 
     }
 
@@ -89,6 +94,8 @@ public class GameManager : MonoBehaviour
         panels.gameOverGroupButton.Select();
         gameOverPanel = true;
         playing = false;
+        gameAudio.audioSource.clip = gameAudio.sounds[2];
+        gameAudio.audioSource.Play();
     }
 
     public void Escape()
@@ -125,6 +132,11 @@ public class GameManager : MonoBehaviour
     public void ActualizarVidas(int vidas)
     {
         texts.livesText.text = vidas.ToString();
+    }
+
+    public void PlayClick()
+    {
+        gameAudio.PlayAudio(0);
     }
 }
 
