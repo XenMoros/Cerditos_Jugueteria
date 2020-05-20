@@ -48,19 +48,24 @@ MonoBehaviour:
   - {fileID: 5144648946636093662, guid: effec1307ec19c24da2799392dc740d7, type: 3}
   - {fileID: 5144648946636093662, guid: 0bd73d53036ea434b9753b4cce91aaff, type: 3}
   instantiatedObjects: []
-  pelotas:
-  - {fileID: 3816775663904309291, guid: dbb9ce1bbb433254dbcccf394b447c6f, type: 3}
-  instantiatedPelotas: []
+  juguetes:
+  - {fileID: 1066977587356273385, guid: cfb80d16115ed9e409c5488e849b336b, type: 3}
+  - {fileID: 5665173031734329814, guid: 95741a4ebcfe28f488fc92c122c0d367, type: 3}
+  - {fileID: 995090517130893926, guid: e6794f49a2dfb4c479a32e8fae6ca80c, type: 3}
+  - {fileID: 6218948572842517416, guid: 309ce35f9b1d0034d9a59b8d2aeadfa1, type: 3}
+  - {fileID: 4904029333384815760, guid: 81cb9cfb15256a54d88a3c1aa45052ca, type: 3}
+  - {fileID: 403086494024951666, guid: 6d077ce1646e09841b5b241bb554e644, type: 3}
+  - {fileID: 9030727019522730839, guid: 2ad31d7cb5927fb489f2a13cf1c0033a, type: 3}
+  instantiatedJuguetes: []
   spawns:
     spawnEstanteria: {fileID: 0}
-    spawnPelota: {fileID: 0}
+    spawnJuguetes: {fileID: 0}
   timeEstantes: 0
-  timePelotas: 0
+  timeJuguetes: 0
   generator: {fileID: 3631244202730000527}
   cosasMoviles: {fileID: 0}
   intEstanterias: 0
-  intPelotas: 0
   initialRandomEstantes: 4.5
   endRandomEstantes: 7.5
   initialRandomPelotas: 7.5
-  endRandomPelotas: 12.5
+  endRandomPelotas: 20

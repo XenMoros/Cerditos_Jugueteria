@@ -7,22 +7,21 @@ public class InstantiateObjects : MonoBehaviour
 {
     public List<GameObject> estanterias = new List<GameObject>();
     public List<GameObject> instantiatedObjects = new List<GameObject>();
-    public List<GameObject> pelotas = new List<GameObject>();
-    public List<GameObject> instantiatedPelotas = new List<GameObject>();
+    public List<GameObject> juguetes = new List<GameObject>();
+    public List<GameObject> instantiatedJuguetes = new List<GameObject>();
     
     public SpawnPoints spawns;
 
     public float timeEstantes = 0;
-    public float timePelotas;
+    public float timeJuguetes;
 
     public Transform generator;
     public Transform cosasMoviles;
 
     public int intEstanterias;
-    public int intPelotas = 0;
 
     public float initialRandomEstantes = 6f, endRandomEstantes = 7.5f;
-    public float initialRandomPelotas = 7.5f, endRandomPelotas = 12.5f;
+    public float initialRandomPelotas = 7.5f, endRandomPelotas = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +43,7 @@ public class InstantiateObjects : MonoBehaviour
 
         instantiatedObjects.Clear();
 
-        foreach (GameObject juguete in instantiatedPelotas)
+        foreach (GameObject juguete in instantiatedJuguetes)
         {
             if (juguete != null)
             {
@@ -52,7 +51,7 @@ public class InstantiateObjects : MonoBehaviour
             }
         }
 
-        instantiatedPelotas.Clear();
+        instantiatedJuguetes.Clear();
 
         foreach (GameObject juguete in GameObject.FindGameObjectsWithTag("Enemy"))
         {
@@ -60,40 +59,49 @@ public class InstantiateObjects : MonoBehaviour
         }
 
         timeEstantes = 1.0f;
-        timePelotas = 1.5f;
+        timeJuguetes = 1.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
         timeEstantes -= Time.deltaTime;
-        timePelotas -= Time.deltaTime;
+        timeJuguetes -= Time.deltaTime;
 
         if (instantiatedObjects.Count <= 5 && timeEstantes <= 0)
         {
             intEstanterias = Random.Range(0, 2);
-
+            
             instantiatedObjects.Add(Instantiate(estanterias[intEstanterias], spawns.spawnEstanteria.transform.position, spawns.spawnEstanteria.transform.rotation, cosasMoviles));
-
             timeEstantes = Random.Range(initialRandomEstantes/StaticComponent.GetCurrentSpeed(), endRandomEstantes / StaticComponent.GetCurrentSpeed());
 
         }
 
-        if (instantiatedPelotas.Count <= 0 && timePelotas <=0)
+        if (instantiatedJuguetes.Count <= 0 && timeJuguetes <=0)
         {
-            instantiatedPelotas.Add(Instantiate(pelotas[intPelotas], spawns.spawnPelota.transform.position, spawns.spawnPelota.transform.rotation, cosasMoviles));
+            int juegueteAInstanciar = Random.Range(0, juguetes.Count);
+            Vector3 spawnPositionJuguete;
+            if (juegueteAInstanciar == 0)
+            {
+                spawnPositionJuguete = spawns.spawnJuguetes.transform.position + Random.Range(2f, 4f) * Vector3.up;
+            }
+            else
+            {
+                spawnPositionJuguete = spawns.spawnJuguetes.transform.position;
+            }
+            instantiatedJuguetes.Add(Instantiate(juguetes[juegueteAInstanciar], spawnPositionJuguete, juguetes[juegueteAInstanciar].transform.rotation, cosasMoviles));
 
-            timePelotas = Random.Range(initialRandomPelotas / StaticComponent.GetCurrentSpeed(), endRandomPelotas / StaticComponent.GetCurrentSpeed());
+            timeJuguetes = Random.Range(initialRandomPelotas / StaticComponent.GetCurrentSpeed(), endRandomPelotas / StaticComponent.GetCurrentSpeed());
         }
 
         instantiatedObjects.TrimExcess();
-        instantiatedPelotas.TrimExcess();
+        instantiatedJuguetes.TrimExcess();
     }
 
     public void ReordenarLista()
     {
         instantiatedObjects.RemoveAll(estante => estante == null);
-        instantiatedPelotas.RemoveAll(estante => estante == null);
+        instantiatedJuguetes.RemoveAll(estante => estante == null);
     }
 
     
@@ -103,6 +111,6 @@ public class InstantiateObjects : MonoBehaviour
 public class SpawnPoints
 {
     public Transform spawnEstanteria;
-    public Transform spawnPelota;
+    public Transform spawnJuguetes;
 
 }
