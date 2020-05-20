@@ -50,6 +50,7 @@ MonoBehaviour:
   instantiatedObjects: []
   juguetes:
   - {fileID: 1066977587356273385, guid: cfb80d16115ed9e409c5488e849b336b, type: 3}
+  - {fileID: 2541878068468974222, guid: d79dfa032e0bece42b7b18023f38c234, type: 3}
   - {fileID: 5665173031734329814, guid: 95741a4ebcfe28f488fc92c122c0d367, type: 3}
   - {fileID: 995090517130893926, guid: e6794f49a2dfb4c479a32e8fae6ca80c, type: 3}
   - {fileID: 6218948572842517416, guid: 309ce35f9b1d0034d9a59b8d2aeadfa1, type: 3}
@@ -65,7 +66,7 @@ MonoBehaviour:
   generator: {fileID: 3631244202730000527}
   cosasMoviles: {fileID: 0}
   intEstanterias: 0
-  initialRandomEstantes: 4.5
-  endRandomEstantes: 7.5
+  initialRandomEstantes: 6
+  endRandomEstantes: 8
   initialRandomPelotas: 7.5
-  endRandomPelotas: 20
+  endRandomPelotas: 13

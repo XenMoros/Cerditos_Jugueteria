@@ -81,7 +81,7 @@ public class InstantiateObjects : MonoBehaviour
         {
             int juegueteAInstanciar = Random.Range(0, juguetes.Count);
             Vector3 spawnPositionJuguete;
-            if (juegueteAInstanciar == 0)
+            if (juegueteAInstanciar <= 1)
             {
                 spawnPositionJuguete = spawns.spawnJuguetes.transform.position + Random.Range(2f, 4f) * Vector3.up;
             }
