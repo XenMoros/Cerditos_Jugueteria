@@ -37,6 +37,7 @@ public class Vidas : MonoBehaviour
             if(timerInvencible >= tiempoInvencible)
             {
                 invencible = false;
+                aController.animator.SetBool("Invencible", invencible);
             }
         }
     }
@@ -72,6 +73,7 @@ public class Vidas : MonoBehaviour
             currentLives -= 1;
             timerInvencible = 0;
             invencible = true;
+            aController.animator.SetBool("Invencible", invencible);
 
             gameManager.ActualizarVidas(currentLives);
 
