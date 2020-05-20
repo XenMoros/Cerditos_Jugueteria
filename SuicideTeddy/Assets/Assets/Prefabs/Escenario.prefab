@@ -465,6 +465,11 @@ PrefabInstance:
       propertyPath: cosasMoviles
       value: 
       objectReference: {fileID: 2080313285923565215}
+    - target: {fileID: 3631244202730000520, guid: ac252a1a135b18d40ac02f1a2f0af2ee,
+        type: 3}
+      propertyPath: spawns.spawnJuguetes
+      value: 
+      objectReference: {fileID: 7380241038760536904}
     - target: {fileID: 3631244202730000526, guid: ac252a1a135b18d40ac02f1a2f0af2ee,
         type: 3}
       propertyPath: m_Name

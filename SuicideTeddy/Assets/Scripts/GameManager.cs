@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     public PlayerAudio gameAudio;
 
+    public List<LivesDisplay> livesDisplayers;
+
     bool gameOverPanel = false;
     bool playing = false;
 
@@ -131,7 +133,10 @@ public class GameManager : MonoBehaviour
 
     public void ActualizarVidas(int vidas)
     {
-        texts.livesText.text = vidas.ToString();
+        foreach(LivesDisplay display in livesDisplayers)
+        {
+            display.SetVisibility(vidas);
+        }
     }
 
     public void PlayClick()
@@ -154,5 +159,4 @@ public class CanvasPanels
 public class InterfaceTexts
 {
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI livesText;
 }
