@@ -56,8 +56,8 @@ MonoBehaviour:
     mainGroupButton: {fileID: 4808159862689601706}
     gameOverGroupButton: {fileID: 7458886249781281022}
   texts:
-    scoreText: {fileID: 8653817220858987902}
-    livesText: {fileID: 3399820377920963796}
+    scoreText: {fileID: 3316898040315632664}
+    livesText: {fileID: 2493352575963358628}
 --- !u!1001 &2636276682457877615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ PrefabInstance:
     - target: {fileID: 845402611616123067, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 845402611616123067, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
@@ -103,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 1931996946880916870, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_fontSize
-      value: 65.85
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 1931996946880916870, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
@@ -113,7 +113,7 @@ PrefabInstance:
     - target: {fileID: 2429411017986733764, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_fontSize
-      value: 69.75
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 2429411017986733764, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
@@ -123,7 +123,7 @@ PrefabInstance:
     - target: {fileID: 2870687654399332010, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_fontSize
-      value: 49.05
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 3221193368144043649, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
@@ -133,12 +133,12 @@ PrefabInstance:
     - target: {fileID: 3337551069522942413, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_Name
-      value: Vidas
+      value: VidasText
       objectReference: {fileID: 0}
     - target: {fileID: 3663375087337263823, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_fontSize
-      value: 49.05
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 4834233952196512913, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
@@ -158,7 +158,7 @@ PrefabInstance:
     - target: {fileID: 6669100170530605329, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6669100170530605329, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
@@ -223,17 +223,17 @@ PrefabInstance:
     - target: {fileID: 8232240087640518741, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_fontSize
-      value: 45.85
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 8240367508752502262, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_fontSize
-      value: 49.05
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 8252746641572166500, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
       propertyPath: m_Name
-      value: Score
+      value: ScoreText
       objectReference: {fileID: 0}
     - target: {fileID: 9179769473021874236, guid: bbe583f343b0e6e43a78348a4827c613,
         type: 3}
@@ -340,9 +340,9 @@ CanvasGroup:
     type: 3}
   m_PrefabInstance: {fileID: 2636276682457877615}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8653817220858987902 stripped
+--- !u!114 &2493352575963358628 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6669100170530605329, guid: bbe583f343b0e6e43a78348a4827c613,
+  m_CorrespondingSourceObject: {fileID: 436784678370142667, guid: bbe583f343b0e6e43a78348a4827c613,
     type: 3}
   m_PrefabInstance: {fileID: 2636276682457877615}
   m_PrefabAsset: {fileID: 0}
@@ -352,9 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3399820377920963796 stripped
+--- !u!114 &3316898040315632664 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 845402611616123067, guid: bbe583f343b0e6e43a78348a4827c613,
+  m_CorrespondingSourceObject: {fileID: 761691754557591671, guid: bbe583f343b0e6e43a78348a4827c613,
     type: 3}
   m_PrefabInstance: {fileID: 2636276682457877615}
   m_PrefabAsset: {fileID: 0}
