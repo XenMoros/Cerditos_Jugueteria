@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-2.544921875,"y":1.7431640625,"z":-4.359375},"rotation":{"x":0.10825295746326447,"y":0.5766714811325073,"z":-0.07744632661342621,"w":0.8060604929924011},"size":23.925949096679689,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":2.470876455307007,"y":-0.9394584894180298,"z":-3.904296875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":-1.0},"size":15.861601829528809,"orthographic":true}
+>>>>>>> AddToys
