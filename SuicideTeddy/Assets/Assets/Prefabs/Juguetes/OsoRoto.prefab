@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 777670235526736914}
   - component: {fileID: 114350625469041614}
   - component: {fileID: 5876901948856486143}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: OsoRoto
   m_TagString: Enemy
   m_Icon: {fileID: 0}

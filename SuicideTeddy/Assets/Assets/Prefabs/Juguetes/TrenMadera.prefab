@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 54931410571361380}
   - component: {fileID: 7507237129997559432}
   - component: {fileID: 6248752719132507491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TrenMadera
   m_TagString: Enemy
   m_Icon: {fileID: 0}

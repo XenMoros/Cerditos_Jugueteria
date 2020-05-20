@@ -21,7 +21,7 @@ public class InstantiateObjects : MonoBehaviour
     public int intEstanterias;
     public int intPelotas = 0;
 
-    public float initialRandomEstantes = 4.5f, endRandomEstantes = 7.5f;
+    public float initialRandomEstantes = 6f, endRandomEstantes = 7.5f;
     public float initialRandomPelotas = 7.5f, endRandomPelotas = 12.5f;
     // Start is called before the first frame update
     void Start()
@@ -59,8 +59,8 @@ public class InstantiateObjects : MonoBehaviour
             juguete.GetComponent<Scroll>().AutoDestruccion();
         }
 
-        timeEstantes = 2.0f;
-        timePelotas = 2.5f;
+        timeEstantes = 1.0f;
+        timePelotas = 1.5f;
     }
 
     // Update is called once per frame

@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         OpenPanel(panels.mainGroup, true);
         OpenPanel(panels.interfaceGroup, false);
         OpenPanel(panels.gameOverGroup, false);
@@ -84,11 +84,6 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        if (player != null)
-        {
-            player.AutoDestruccion();
-        }
-
         OpenPanel(panels.mainGroup, false);
         OpenPanel(panels.gameOverGroup, true);
         panels.gameOverGroupButton.Select();

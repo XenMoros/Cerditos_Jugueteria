@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4366931662098063319}
   - component: {fileID: 114236261942638746}
   - component: {fileID: 114063034122154794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coche
   m_TagString: Enemy
   m_Icon: {fileID: 0}
