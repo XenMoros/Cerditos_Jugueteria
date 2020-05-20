@@ -58,7 +58,7 @@ MonoBehaviour:
   - {fileID: 9030727019522730839, guid: 2ad31d7cb5927fb489f2a13cf1c0033a, type: 3}
   instantiatedJuguetes: []
   spawns:
-    spawnEstanteria: {fileID: 0}
+    spawnEstanteria: {fileID: 3631244202730000527}
     spawnJuguetes: {fileID: 0}
   timeEstantes: 0
   timeJuguetes: 0
