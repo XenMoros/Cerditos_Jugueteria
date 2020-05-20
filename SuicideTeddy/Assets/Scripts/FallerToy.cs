@@ -20,12 +20,14 @@ public class FallerToy : MonoBehaviour
     {
         if (other.CompareTag("FallZone") && !comprobado)
         {
-            if (Random.Range(0f, 1f) < 0.4f)
+            comprobado = true;
+
+            if (Random.Range(0f, 1f) < 0.07f)
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y, -5);
                 objectRB.AddForce(10 * Vector3.down, ForceMode.Impulse);
                 objectRB.useGravity = true;
-                comprobado = true;
+                
             }
         }
     }

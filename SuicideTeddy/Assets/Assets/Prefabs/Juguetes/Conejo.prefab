@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3217004749615657868}
   - component: {fileID: 3173606775753289026}
   - component: {fileID: 6973985035926889921}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Conejo
   m_TagString: Enemy
   m_Icon: {fileID: 0}

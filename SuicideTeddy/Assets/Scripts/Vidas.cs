@@ -9,6 +9,7 @@ public class Vidas : MonoBehaviour
     int maxLives = 3;
     public int currentLives;
     public bool invencible;
+    public AnimatorController aController;
 
     [Range(0f,10f)] public float tiempoInvencible = 3;
     float timerInvencible;
@@ -27,6 +28,8 @@ public class Vidas : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(invencible);
+
         if(invencible)
         {
             timerInvencible += Time.deltaTime;
@@ -38,18 +41,20 @@ public class Vidas : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.collider.tag);
         if (collision.collider.CompareTag("Enemy"))
         {
+            Debug.Log("lolaso");
+
             if (!invencible) PerderVidas();
         }
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision.tag);
         if (collision.CompareTag("DeadZone"))
         {
+            Debug.Log("Enganchao");
+
             currentLives = 0;
             gameManager.ActualizarVidas(currentLives);
             Kill();
@@ -58,21 +63,23 @@ public class Vidas : MonoBehaviour
 
     private void PerderVidas()
     {
-        currentLives -= 1;
-        timerInvencible = 0;
-        invencible = true;
-
-        gameManager.ActualizarVidas(currentLives);
-
-        if (currentLives <= 0)
+        if(currentLives > 0)
         {
-            Kill();
-        }
+            currentLives -= 1;
+            timerInvencible = 0;
+            invencible = true;
 
+            gameManager.ActualizarVidas(currentLives);
+
+            if (currentLives <= 0)
+            {
+                Kill();
+            }
+        }
     }
 
     private void Kill()
     {
-        gameManager.EndGame();
+        aController.ActivateDead();
     }
 }
