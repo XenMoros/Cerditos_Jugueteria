@@ -743,12 +743,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899134391}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1970898257 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
-    type: 3}
-  m_PrefabInstance: {fileID: 4143136542108568811}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1970898258 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8491184620956972466, guid: 18793e940f2a25d4ba3615906526626d,
@@ -1210,12 +1204,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8491184620956972466, guid: 18793e940f2a25d4ba3615906526626d,
         type: 3}
-      propertyPath: spawns.spawnEstanteria
+      propertyPath: spawns.spawnPelota
       value: 
-      objectReference: {fileID: 1970898257}
+      objectReference: {fileID: 362119674}
     - target: {fileID: 8491184620956972466, guid: 18793e940f2a25d4ba3615906526626d,
         type: 3}
-      propertyPath: spawns.spawnPelota
+      propertyPath: spawns.spawnJuguetes
       value: 
       objectReference: {fileID: 362119674}
     - target: {fileID: 8491184620956972469, guid: 18793e940f2a25d4ba3615906526626d,
