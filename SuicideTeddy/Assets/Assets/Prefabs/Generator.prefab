@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3631244202730000526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3631244202730000527}
+  - component: {fileID: 3631244202730000520}
+  m_Layer: 0
+  m_Name: Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3631244202730000527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631244202730000526}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3631244202730000520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631244202730000526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b2281d26baa7c4faf08dc44658cf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estanterias:
+  - {fileID: 5144648946636093662, guid: c257cade9ad90e2489570856f5365dc4, type: 3}
+  - {fileID: 5144648946636093662, guid: effec1307ec19c24da2799392dc740d7, type: 3}
+  - {fileID: 5144648946636093662, guid: 0bd73d53036ea434b9753b4cce91aaff, type: 3}
+  instantiatedObjects: []
+  juguetes:
+  - {fileID: 1066977587356273385, guid: cfb80d16115ed9e409c5488e849b336b, type: 3}
+  - {fileID: 2541878068468974222, guid: d79dfa032e0bece42b7b18023f38c234, type: 3}
+  - {fileID: 5665173031734329814, guid: 95741a4ebcfe28f488fc92c122c0d367, type: 3}
+  - {fileID: 995090517130893926, guid: e6794f49a2dfb4c479a32e8fae6ca80c, type: 3}
+  - {fileID: 6218948572842517416, guid: 309ce35f9b1d0034d9a59b8d2aeadfa1, type: 3}
+  - {fileID: 4904029333384815760, guid: 81cb9cfb15256a54d88a3c1aa45052ca, type: 3}
+  - {fileID: 403086494024951666, guid: 6d077ce1646e09841b5b241bb554e644, type: 3}
+  - {fileID: 9030727019522730839, guid: 2ad31d7cb5927fb489f2a13cf1c0033a, type: 3}
+  instantiatedJuguetes: []
+  spawns:
+    spawnEstanteria: {fileID: 3631244202730000527}
+    spawnJuguetes: {fileID: 0}
+  timeEstantes: 0
+  timeJuguetes: 0
+  generator: {fileID: 3631244202730000527}
+  cosasMoviles: {fileID: 0}
+  intEstanterias: 0
+  initialRandomEstantes: 6
+  endRandomEstantes: 8
+  initialRandomPelotas: 7.5
+  endRandomPelotas: 13

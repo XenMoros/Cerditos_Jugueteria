@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameManager
+  - Enemy
+  - Estanteria
+  - DeadZone
+  - Suelo
+  - Pelota
+  - DestructionZone
+  - Toy
+  - FallZone
   layers:
   - Default
   - TransparentFX
@@ -14,12 +23,12 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - DeadZone
+  - DestructionZone
+  - Player
+  - Obstaculos
+  - Estanteria
   - 
   - 
   - 
