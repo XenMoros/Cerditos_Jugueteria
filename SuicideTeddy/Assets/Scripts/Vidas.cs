@@ -10,6 +10,7 @@ public class Vidas : MonoBehaviour
     public int currentLives;
     public bool invencible;
     public AnimatorController aController;
+    public PlayerAudio playerAudio;
 
     [Range(0f,10f)] public float tiempoInvencible = 3;
     float timerInvencible;
@@ -55,9 +56,12 @@ public class Vidas : MonoBehaviour
         {
             Debug.Log("Enganchao");
 
-            currentLives = 0;
-            gameManager.ActualizarVidas(currentLives);
-            Kill();
+            if(currentLives > 0)
+            {
+                currentLives = 0;
+                gameManager.ActualizarVidas(currentLives);
+                Kill();
+            }
         }
     }
 
@@ -75,11 +79,17 @@ public class Vidas : MonoBehaviour
             {
                 Kill();
             }
+            else
+            {
+                playerAudio.PlayAudio(1);
+            }
         }
     }
 
     private void Kill()
     {
+        playerAudio.PlayAudio(2);
+        gameManager.gameAudio.audioSource.Stop();
         aController.ActivateDead();
     }
 }
