@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 65137792125216150}
   - component: {fileID: 114393020443342032}
   - component: {fileID: 114325638663965692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PiezaAjedrez
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 65122869352794046}
   - component: {fileID: 114198697411591098}
   - component: {fileID: 114768378162830476}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CubosMadera
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

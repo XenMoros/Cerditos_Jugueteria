@@ -470,6 +470,12 @@ PrefabInstance:
       propertyPath: spawns.spawnJuguetes
       value: 
       objectReference: {fileID: 7380241038760536904}
+    - target: {fileID: 3631244202730000520, guid: ac252a1a135b18d40ac02f1a2f0af2ee,
+        type: 3}
+      propertyPath: juguetes.Array.data[7]
+      value: 
+      objectReference: {fileID: 403086494024951666, guid: 6d077ce1646e09841b5b241bb554e644,
+        type: 3}
     - target: {fileID: 3631244202730000526, guid: ac252a1a135b18d40ac02f1a2f0af2ee,
         type: 3}
       propertyPath: m_Name

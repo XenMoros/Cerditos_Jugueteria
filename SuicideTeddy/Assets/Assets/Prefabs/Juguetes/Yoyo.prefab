@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 65678652991770458}
   - component: {fileID: 114640062432600080}
   - component: {fileID: 114398949614567112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Yoyo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
